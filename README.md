@@ -1,0 +1,1 @@
+# function-app-dotnet-6-isolated-unit-test-example
