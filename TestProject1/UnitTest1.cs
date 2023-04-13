@@ -1,6 +1,7 @@
 using Castle.Core.Logging;
 using FunctionApp1;
 using FunctionApp1.Interfaces;
+using Grpc.Core;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -37,6 +38,7 @@ namespace TestProject1
                 var result = response.ReadHttpResponseData();
 
                 //Assert
+                _logger.Received(1).LogInformation("C# HTTP trigger function processed a request.");
                 Assert.Equal("Welcome to Azure Functions!", result);
             }
 
