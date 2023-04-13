@@ -1,11 +1,12 @@
 using System.Net;
+using FunctionApp1.Interfaces;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
 namespace FunctionApp1
 {
-    public class Function1
+    public class FunctionGetEmployee
     {
         // https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-vs?tabs=isolated-process#create-test-classes
 
@@ -18,16 +19,16 @@ namespace FunctionApp1
         //}
 
         // WORKING
-        private readonly ILogger<Function1> _logger;
+        private readonly ILoggerAdapter<FunctionGetEmployee> _logger;
 
-        public Function1(ILogger<Function1> logger)
+        public FunctionGetEmployee(ILoggerAdapter<FunctionGetEmployee> logger)
         {
             _logger = logger;
         }
 
 
-        [Function("Function1")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
+        [Function("FunctionGetEmployee")]
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = "employee")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
             // var logger = req.FunctionContext.GetLogger<Function1>();
