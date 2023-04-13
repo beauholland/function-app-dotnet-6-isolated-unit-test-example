@@ -27,7 +27,7 @@ namespace FunctionApp1
 
 
         [Function("Function1")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req, ILogger logger)
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
             // var logger = req.FunctionContext.GetLogger<Function1>();

@@ -8,8 +8,9 @@ Which links to this https://github.com/Azure/azure-functions-dotnet-worker/issue
 
 Also looked at the following:
 - https://stackoverflow.com/questions/71254035/see-multiple-ways-to-obtain-ilogger-in-azure-functions-6-from-docs-and-templates
-- ...
-
+- https://devpress.csdn.net/cloudnative/62f50c02c6770329307fb224.html (doesn't include Logging)
+- https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-functions-part-2-unit-and-integration-testing/ba-p/3769764
+  - https://github.com/Azure-Samples/azure-functions-code-testing-sample
 
 Visual Studio 2022 > File New > Azure Functions > .Net 6 Isolated
 
