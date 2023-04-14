@@ -31,7 +31,7 @@ namespace FunctionApp1
         public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = "employee")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
-            // var logger = req.FunctionContext.GetLogger<Function1>();
+            // var logger = req.FunctionContext.GetLogger<FunctionGetEmployee>();
 
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
